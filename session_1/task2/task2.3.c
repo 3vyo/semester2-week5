@@ -57,8 +57,37 @@ int main(void) {
 
 	// complete the rest of the code
 	switch (choice) {
-		case :
+		case 1:
+			printf("current balance: %.2f", balance);
 			break;
+		case 2:
+			printf("enter amount to deposit");
+			scanf("%lf",&amount);
+			if(amount > 0 ){
+				balance += amount;
+				printf("deposited: .%2f\n", amount);
+				printf("current balance: .%2f\n", balance);
+				break;
+
+			}
+			else{
+				printf("invalid deopsit amount\n");
+				return 1;
+			}
+		case 3:
+			printf("enter amount to withdraw:\n");
+			scanf("%lf",&amount);
+			if(amount > 0 && amount <= balance){
+				balance -= amount;
+				printf("amount withdrawn: .%2f", amount);
+				printf("current balance: .%2f", balance);
+				break;
+			}
+			else {
+				printf("insufficient amount or invalid amount");
+				return 1;
+			}
+			
 		default:
 			printf("Invalid choice. Please try again.\n");
 	}

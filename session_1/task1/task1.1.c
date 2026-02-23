@@ -16,7 +16,7 @@
  *   than or equal to the purchase amount
  * - Otherwise, print "Insufficient Balance"
  */
-
+#include <math.h>
 #include <stdio.h>
 
 int main(void) {
@@ -31,7 +31,9 @@ int main(void) {
     scanf("%f", &purchase_amount);
 	
 	// Complete your code here
-	if (){  // todo
+	if (account_balance >= purchase_amount){
+		
+		account_balance -= purchase_amount;
 		// todo
 		printf("Transaction Approved. Remaining balance %.2f\n", account_balance);
 	}
@@ -41,4 +43,3 @@ int main(void) {
 
 	return 0;
 }
-
